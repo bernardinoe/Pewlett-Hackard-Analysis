@@ -10,7 +10,7 @@ The purpose of the analysis is to understand which employees will be retiring so
 - Senior Engineer and Senior Staff are the two main positions whith more employees that would be leaving the company in the silver tsunami.
 - There is no major impact on the manager position
 
-![Retiring Titles](https://github.com/bernardinoe/Pewlett-Hackard-Analysis/RetiringImage.PNG)
+![Retiring Titles](https://github.com/bernardinoe/Pewlett-Hackard-Analysis/blob/main/RetiringImage.PNG)
 
 
 
