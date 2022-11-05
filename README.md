@@ -13,13 +13,13 @@ The purpose of the analysis is to understand which employees will be retiring so
 ![Retiring Titles](https://github.com/bernardinoe/Pewlett-Hackard-Analysis/blob/main/RetiringImage.PNG)
 
 
-
 ## Summary: Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
 - How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 There are 7 different roles that need filled, the biggest impact is concetrated in two roles. 
 - Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 No, there are only 1,549 which i believe is not enough compared to the total employees leaving.
 - I would use the following query to understand and compare the previous group of people retiring
+
 SELECT e.emp_no,
 	e.first_name,
 	e.last_name,
@@ -32,7 +32,9 @@ FROM employees as e
 	ON (e.emp_no = tt.emp_no)
 WHERE e.birth_date BETWEEN '1948-01-01' AND '1951-12-31'
 ORDER BY emp_no ASC;
+
 - I would expand the mentorship program by increasing the range of birth date. BY adding one extra year, there are almost 20K available mentors.
+
 SELECT DISTINCT ON (e.emp_no)
 	e.emp_no, 
 	e.first_name,
