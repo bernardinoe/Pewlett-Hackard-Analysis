@@ -20,6 +20,7 @@ There are 7 different roles that need filled, the biggest impact is concetrated 
 No, there are only 1,549 which i believe is not enough compared to the total employees leaving.
 - I would use the following query to understand and compare the previous group of people retiring
 
+```
 SELECT e.emp_no,
 	e.first_name,
 	e.last_name,
@@ -32,9 +33,11 @@ FROM employees as e
 	ON (e.emp_no = tt.emp_no)
 WHERE e.birth_date BETWEEN '1948-01-01' AND '1951-12-31'
 ORDER BY emp_no ASC;
+```
 
 - I would expand the mentorship program by increasing the range of birth date. BY adding one extra year, there are almost 20K available mentors.
 
+```
 SELECT DISTINCT ON (e.emp_no)
 	e.emp_no, 
 	e.first_name,
@@ -52,3 +55,4 @@ FROM employees as e
 WHERE (d.to_date = '9999-01-01')
 AND (e.birth_date BETWEEN '1964-01-01' AND '1965-12-31')
 ORDER BY e.emp_no;
+```
